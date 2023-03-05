@@ -2,7 +2,7 @@ import { CommodityRepository } from '../src/commodityRepository';
 
 describe('Repository Test', () => {
   const repository = new CommodityRepository();
-  repository.pathToCsv = "../tests/sample.csv"	
+  repository.pathToCsv = "../tests/resources/sample.csv"	
 	
   test('two commodities should be returned', () => {
 	expect(repository.findAll().length).toBe(3);
