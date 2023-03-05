@@ -1,0 +1,35 @@
+{
+  "name": "back-end-interview",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "test": "jest --verbose ./tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SkylarWatson/back-end-interview.git"
+  },
+  "author": "Skylar Watson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SkylarWatson/nutrien_back-end-interview/issues"
+  },
+  "homepage": "https://github.com/SkylarWatson/nutrien_back-end-interview#readme",
+  "devDependencies": {
+    "@types/node": "^18.14.2",
+    "ts-jest": "^29.0.5"
+  },
+  "dependencies": {
+    "acorn": "^8.8.2",
+    "acorn-walk": "^8.2.0",
+    "arg": "^4.1.3",
+    "create-require": "^1.1.1",
+    "diff": "^4.0.2",
+    "make-error": "^1.3.6",
+    "v8-compile-cache-lib": "^3.0.1",
+    "yn": "^3.1.1"
+  },
+  "keywords": [],
+  "description": ""
+}
