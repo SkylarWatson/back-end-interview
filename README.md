@@ -1,16 +1,16 @@
 ## Clone Project
 
-git clone git@github.com:SkylarWatson/back-end-interview.git
+`git clone git@github.com:SkylarWatson/back-end-interview.git`
 
 ## Setup Project
 
-npm install
+`npm install`
 
 ## Run
 
-npm start
+`npm start`
 
 ## Example
 
-http://localhost:8080/Commodity/histogram
-http://localhost:8080/CommodityType/histogram
+ - http://localhost:8080/Commodity/histogram
+ - http://localhost:8080/CommodityType/histogram
