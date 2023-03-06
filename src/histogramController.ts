@@ -1,4 +1,5 @@
 import { CommodityService } from './commodityService';
+import { IncomingMessage, ServerResponse } from 'http';
 import { Response } from 'express';
 
 
@@ -10,7 +11,26 @@ class HistogramController {
     }
 	
 	histogram(fieldName: string, response: Response) {
-		response.send(Object.fromEntries(this.service.histogram(fieldName)));
+		response.send(this.html(this.service.histogram(fieldName)));
+	}
+	
+	
+	html(histogramData: Map<string, number>) : string {
+		let result = Object.fromEntries(histogramData);
+		
+		var data = [
+		  {
+			x: Object.keys(result),
+			y: Object.values(result),
+		    type: 'bar'
+		  }
+		];
+		
+		let importPlotly = '<script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>\n';
+		let container = '<div id="container"></div>\n'
+		let drawGraph = '<script>Plotly.newPlot("container",' + JSON.stringify(data) + ');</script>';
+		
+		return importPlotly + container + drawGraph;
 	}
 }
 

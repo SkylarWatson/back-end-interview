@@ -13,10 +13,22 @@ describe('Histogram Controller Test', () => {
   ]);
 
   test('Write histogram data to response', () => {
+	var data = [
+	  {
+		x: ['Rice', 'Barley'],
+		y: [10, 25],
+	    type: 'bar'
+	  }
+	];
+	  
+	let importPlotly = '<script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>\n';
+	let container = '<div id="container"></div>\n'
+	let drawGraph = '<script>Plotly.newPlot("container",' + JSON.stringify(data) + ');</script>';
+	
 	when(service.histogram('Commodity')).thenReturn(result);
 
 	new HistogramController(instance(service)).histogram('Commodity', instance(response));
 
-	verify(response.send(deepEqual(Object.fromEntries(result)))).times(1);
+	verify(response.send(importPlotly + container + drawGraph)).times(1);
   });
 });
