@@ -1,6 +1,6 @@
 ## Clone Project
 
-git clone ...
+git clone git@github.com:SkylarWatson/back-end-interview.git
 
 ## Setup Project
 
