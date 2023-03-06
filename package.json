@@ -23,6 +23,7 @@
     "ts-mockito": "^2.6.1"
   },
   "dependencies": {
+    "express": "^4.18.2",
     "csv-parse": "^5.3.6",
     "acorn": "^8.8.2",
     "acorn-walk": "^8.2.0",
