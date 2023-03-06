@@ -3,9 +3,9 @@ import { CommodityRepository } from './commodityRepository';
 class CommodityService {
 	repository: CommodityRepository;
 
-    constructor(repository?: CommodityRepository) {
-  		this.repository = repository ? repository : new CommodityRepository();
-    }
+	constructor(repository?: CommodityRepository) {
+		this.repository = repository ? repository : new CommodityRepository();
+	}
 
 	findAll() : Map<string,string>[] {
 		return this.repository.findAll();

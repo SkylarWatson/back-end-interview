@@ -3,7 +3,7 @@ import * as path from "path";
 import { parse } from 'csv-parse/sync';
 
 class CommodityRepository {
-   pathToCsv: string = './resources/Projection2021.csv';
+	pathToCsv: string = './resources/Projection2021.csv';
 
 	findAll(): any {
 		const csvFilePath = path.resolve(__dirname, this.pathToCsv);

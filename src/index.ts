@@ -11,5 +11,5 @@ app.get( '/:fieldName/histogram', function (request: Request, response: Response
 
 
 app.listen( port, () => {
-    console.log( `server started at http://localhost:${ port }` );
+	console.log( `server started at http://localhost:${ port }` );
 });
